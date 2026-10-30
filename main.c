@@ -10,20 +10,20 @@ int main (void) {
 
     int repetir;
     int dia = data.tm_mday;
-    int mes = data.tm_mon + 1;     // tm_mon comeÁa em 0 (janeiro = 0)
+    int mes = data.tm_mon + 1;     // tm_mon come√ßa em 0 (janeiro = 0)
     int ano = data.tm_year + 1900; // tm_year conta a partir de 1900
 
 	int codigoProduto;
 	int regiao;
 	int continuar = 1; // controla o while (loop da escolha dos produtos)
-	float preco = 0.0; // preÁo do produto (unit·rio) - comeÁa zerado pois ir· receber diferentes valores
-	float peso = 0.0; // peso do produto (unit·rio) - comeÁa zerado pois ir· receber diferentes valores
+	float preco = 0.0; // pre√ßo do produto (unit√°rio) - come√ßa zerado pois ir√° receber diferentes valores
+	float peso = 0.0; // peso do produto (unit√°rio) - come√ßa zerado pois ir√° receber diferentes valores
 	char nome[50];
-	int opcao; // È a variavel "deseja adicionar mais um produto"
+	int opcao; // √© a variavel "deseja adicionar mais um produto"
 	
-	// As vari·veis comeÁam zeradas porque ser„o preenchidas conforme o usu·rio
-	// adiciona produtos ao carrinho. Cada item escolhido soma preÁo e peso nelas.
-	// No inÌcio da compra, n„o existe nenhum valor calculado, ent„o todas comeÁam em 0.0.
+	// As vari√°veis come√ßam zeradas porque ser√£o preenchidas conforme o usu√°rio
+	// adiciona produtos ao carrinho. Cada item escolhido soma pre√ßo e peso nelas.
+	// No in√≠cio da compra, n√£o existe nenhum valor calculado, ent√£o todas come√ßam em 0.0.
 
 	float somaProdutos = 0;	// soma dos valores dos produtos no carrinho
 	float totalantes = 0; // valor total antes do frete
@@ -46,19 +46,19 @@ int main (void) {
 		while (continuar == 1) {
 		 	system("cls");
 		 	
-		 	printf("ATACAD√O DO AMIG√O - OS MELHORES PRE«OS DA REGI√O\n\n");
+		 	printf("ATACAD√ÉO DO AMIG√ÉO - OS MELHORES PRE√áOS DA REGI√ÉO\n\n");
 		 	printf("LISTA DE PRODUTOS:\n");
-		 	printf("[1] Mouse Gamer ó R$ 89,90 ó 0,3 kg\n");
-	        printf("[2] Teclado Mec‚nico ó R$ 199,90 ó 1,0 kg\n");
-	        printf("[3] Headset Bluetooth ó R$ 149,90 ó 0,5 kg\n");
-	        printf("[4] Monitor 240hz ó R$ 749,90 ó 3,5 kg\n");
-	        printf("[5] Cadeira Gamer ó R$ 899,90 ó 12 kg\n\n");
+		 	printf("[1] Mouse Gamer ‚Äî R$ 89,90 ‚Äî 0,3 kg\n");
+	        printf("[2] Teclado Mec√¢nico ‚Äî R$ 199,90 ‚Äî 1,0 kg\n");
+	        printf("[3] Headset Bluetooth ‚Äî R$ 149,90 ‚Äî 0,5 kg\n");
+	        printf("[4] Monitor 240hz ‚Äî R$ 749,90 ‚Äî 3,5 kg\n");
+	        printf("[5] Cadeira Gamer ‚Äî R$ 899,90 ‚Äî 12 kg\n\n");
 	
-	        printf("Escolha o cÛdigo do produto: ");
+	        printf("Escolha o c√≥digo do produto: ");
 	        scanf("%d", &codigoProduto);
 	        
 	        if (codigoProduto < 1 || codigoProduto > 5) {
-	            printf("\nOpÁ„o inv·lida! Digite um n˙mero de 1 a 5.\n");
+	            printf("\nOp√ß√£o inv√°lida! Digite um n√∫mero de 1 a 5.\n");
 	            system("pause");
 	            system("cls");
 	            continue; // Volta para a tela inicial
@@ -72,7 +72,7 @@ int main (void) {
 					break;
 					
 				case 2:
-					strcpy(nome, "Teclado Mec‚nico");
+					strcpy(nome, "Teclado Mec√¢nico");
 					preco = 199.90;
 					peso = 1.0;
 					break;
@@ -115,16 +115,16 @@ int main (void) {
 			// mostra o produto selecionado
 			printf("Carrinho\n");
 			printf("Produto selecionado: %s\n", nome);
-			printf("PreÁo: R$ %.2f\n", preco);
+			printf("Pre√ßo: R$ %.2f\n", preco);
 	    	printf("Peso: %.2f kg\n", peso);
 	    	printf("Total: R$ %.2f\n", somaProdutos);
 	    	printf("Peso total: %.2f kg\n", pesoTotal);
 	    	
-	    	// Pergunta do sim ou n„o - se deseja escolher mais produtos
+	    	// Pergunta do sim ou n√£o - se deseja escolher mais produtos
 	    	
 	    	while(1) {
 	    		printf("\nDeseja adicionar mais um produto?\n");
-	    		printf("[1] Sim\n[2] N„o\nEscolha: ");
+	    		printf("[1] Sim\n[2] N√£o\nEscolha: ");
 	    		scanf("%d", &opcao);
 	    		
 	    		if (opcao == 1) {
@@ -139,10 +139,10 @@ int main (void) {
 					
 					for (i = 0; i < qtdProdutos; i++) {
 					    printf("\nProduto %d:", i + 1);
-					    printf("\nCÛdigo: %d", codigosCarrinho[i]);
+					    printf("\nC√≥digo: %d", codigosCarrinho[i]);
 					    printf("\nNome: %s", nomesCarrinho[i]);
 					    printf("\nPeso individual: %.2f kg", pesosCarrinho[i]);
-					    printf("\nPreÁo: R$ %.2f\n", precosCarrinho[i]);
+					    printf("\nPre√ßo: R$ %.2f\n", precosCarrinho[i]);
 					}
 					
 					printf("\n-----------------------------------------");
@@ -153,7 +153,7 @@ int main (void) {
 				}
 				
 				else {
-					printf("\nOpÁ„o inv·lida!\n");
+					printf("\nOp√ß√£o inv√°lida!\n");
 	                system("pause");
 	                system("cls");
 				}	
@@ -168,23 +168,23 @@ int main (void) {
 			    
 			    // 3a TELA!!!!
 			
-			    printf("REGI√O DE ENTREGA\n");
+			    printf("REGI√ÉO DE ENTREGA\n");
 			    printf("[1] Sul\n");
 			    printf("[2] Sudeste\n");
 			    printf("[3] Norte\n");
 			    printf("[4] Nordeste\n");
-			    printf("Escolha uma regi„o: ");
+			    printf("Escolha uma regi√£o: ");
 			    scanf("%d", &regiao);
 			    
 			    if (regiao < 1 || regiao > 4) {
-		            printf("\nOpÁ„o inv·lida! Digite um n˙mero de 1 a 4.\n");
+		            printf("\nOp√ß√£o inv√°lida! Digite um n√∫mero de 1 a 4.\n");
 		            system("pause");
 		            system("cls");
 		            continue; // Volta para a tela inicial
 		    	}
 		    	else {
 				    switch(regiao){
-				    	case 1: // Regi„o Sul
+				    	case 1: // Regi√£o Sul
 				    		if (pesoTotal <= 2) {
 				    			frete = 30;
 				            }
@@ -192,7 +192,7 @@ int main (void) {
 		    		            frete = 50;
 				            }
 				            break;
-				        case 2: // Regi„o Sudeste
+				        case 2: // Regi√£o Sudeste
 				    		if (pesoTotal <= 2) {
 				    			frete = 25;
 				            }
@@ -200,7 +200,7 @@ int main (void) {
 		    		            frete = 45;
 				            }
 				            break;
-				        case 3: // Regi„o Norte
+				        case 3: // Regi√£o Norte
 				    		if (pesoTotal <= 2) {
 				    			frete = 35;
 				            }
@@ -208,7 +208,7 @@ int main (void) {
 		    		            frete = 55;
 				            }
 				            break;
-				        case 4: // Regi„o Nordeste
+				        case 4: // Regi√£o Nordeste
 				    		if (pesoTotal <= 2) {
 				    			frete = 40;
 				            }
@@ -219,7 +219,7 @@ int main (void) {
 			        }
 				}
 				break;	
-			} // fim while regi„o
+			} // fim while regi√£o
 			
 			system("cls");
 			
@@ -230,14 +230,14 @@ int main (void) {
 			// Lista de produtos novamente
 			for (i = 0; i < qtdProdutos; i++) {
 			    printf("\nProduto %d:", i + 1);
-			    printf("\nCÛdigo: %d", codigosCarrinho[i]);
+			    printf("\nC√≥digo: %d", codigosCarrinho[i]);
 			    printf("\nNome: %s", nomesCarrinho[i]);
 			    printf("\nPeso individual: %.2f kg", pesosCarrinho[i]);
-			    printf("\nPreÁo: R$ %.2f\n", precosCarrinho[i]);
+			    printf("\nPre√ßo: R$ %.2f\n", precosCarrinho[i]);
 			}
 			
 			printf("\n-----------------------------------------\n\n");
-			printf("Regi„o da entrega: ");
+			printf("Regi√£o da entrega: ");
 			
 			switch(regiao){
 			    case 1: printf("Sul\n"); break;
@@ -266,7 +266,7 @@ int main (void) {
 			
 			printf("Data prevista de entrega: %02d/%02d/%d\n", diaPrevisto, mesPrevisto, anoPrevisto);
 		    
-			// Resetando vari·veis do carrinho
+			// Resetando vari√°veis do carrinho
 		    somaProdutos = 0;
 		    qtdProdutos = 0;
 		    pesoTotal = 0;
